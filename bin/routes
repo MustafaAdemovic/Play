@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+GET     /index						controllers.Application.index()
+
+POST   /createtask					controllers.Application.createtask()
+
+GET   /deletetask/:id					controllers.Application.deletetask(id:Integer)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET     /webjars/*file                    controllers.WebJarAssets.at(file)
